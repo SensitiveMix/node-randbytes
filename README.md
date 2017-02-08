@@ -26,9 +26,7 @@ Reading from /dev/urandom (secure and faster):
 
 ```javascript
 
-var RandBytes = new require('randbytes');
-
-var randomSource = RandBytes.urandom.getInstance();
+var randomSource = require('randbytes').urandom.getInstance();
 
 randomSource.getRandomBytes(100, function (buff) {
     console.log(buff.length, " bytes from /dev/urandom :) ");
@@ -57,7 +55,7 @@ var randomSource = RandBytes.timeRandom.getInstance();
 
 ```javascript
 
-var randomSource = new RandBytes.urandom({
+var randomSource = require('randbytes').urandom({
     filePath: '/home/you/walesongs.wav'
 });
 
